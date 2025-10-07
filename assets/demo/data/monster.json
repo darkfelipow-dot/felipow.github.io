@@ -1,4 +1,57 @@
 {
+    "2996": {
+    "id": 2996,
+    "dbname": "XM_CELINE_KIMI",
+    "name": "Celine Kimi",
+    "spawn": "Horror Toy Factort",
+    "stats": {
+      "attackRange": 2,
+      "level": 160,
+      "health": 66666666,
+      "sp": 1,
+      "str": 144,
+      "int": 444,
+      "vit": 44,
+      "dex": 166,
+      "agi": 166,
+      "luk": 166,
+      "rechargeTime": 1264,
+      "atk1": 5,
+      "atk2": 21,
+      "attack": {
+        "minimum": 5636,
+        "maximum": 8303
+      },
+      "magicAttack": {
+        "minimum": 5270,
+        "maximum": 9269
+      },
+      "defense": 479,
+      "baseExperience": 1,
+      "jobExperience": 1,
+      "aggroRange": 10,
+      "escapeRange": 12,
+      "movementSpeed": 200,
+      "attackSpeed": 864,
+      "attackedSpeed": 288,
+      "element": 80,
+      "scale": 2,
+      "race": 0,
+      "magicDefense": 5,
+      "hit": 315,
+      "flee": 307,
+      "ai": "MONSTER_TYPE_17",
+      "mvp": 0,
+      "class": 0,
+      "attr": 0,
+      "res": 0,
+      "mres": 0,
+      "elementName": "Ghost 1",
+      "elementShortName": "Ghost",
+      "scaleName": "Large",
+      "raceName": "Undead"
+    }
+  },
   "1278": {
     "id": 1278,
     "dbname": "STALACTIC_GOLEM",
