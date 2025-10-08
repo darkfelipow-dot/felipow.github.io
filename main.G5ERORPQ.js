@@ -2124,10 +2124,6 @@ var wo = function (n) {
   "p-button-raised",
   "href",
   "https://docs.google.com/forms/d/e/1FAIpQLSfmczMAxCXcOSST6fzRL57aARYwVzUCR1tNIXb0GZM5xY51PQ/viewform?usp=dialog",
-  "target",
-  "_blank",
-  "rel",
-  "noreferrer noopener"
 ],
             [
               "icon",
@@ -2154,7 +2150,7 @@ var wo = function (n) {
               "pRipple",
               "",
               "label",
-              "Support",
+              "ADD ITEM REQUEST",
               1,
               "font-bold",
               "p-button-primary",
@@ -2219,7 +2215,7 @@ var wo = function (n) {
             ],
             [
               "href",
-              "https://web.facebook.com/zfehu.oivgwhy",
+              "https://docs.google.com/forms/d/e/1FAIpQLSfmczMAxCXcOSST6fzRL57aARYwVzUCR1tNIXb0GZM5xY51PQ/viewform?usp=dialog",
               "target",
               "_blank",
               "rel",
