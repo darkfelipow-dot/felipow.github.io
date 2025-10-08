@@ -18818,6 +18818,16 @@ var Q_ = [
       { label: "No", value: 0, isUse: !1 },
     ],
   },
+  {
+    name: "Battle Theme",
+    label: "Battle Theme",
+    inputType: "selectButton",
+    isDebuff: !0,
+    dropdown: [
+      { label: "Yes", value: 5, isUse: !0, bonus: { atk: 40 } },
+      { label: "No", value: 0, isUse: !1 },
+    ],
+  },
 ];
 var QV = (e, t) => {
   let n = e.activeSkills || [],
