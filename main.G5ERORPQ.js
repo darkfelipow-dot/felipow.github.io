@@ -2108,7 +2108,7 @@ var wo = function (n) {
             ["survey", ""],
             ["tracking", ""],
             [ 1, "flex", "align-items-center" ],
-		[
+[
   "icon",
   "pi pi-exclamation-triangle",
   "pButton",
