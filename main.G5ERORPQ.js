@@ -1918,7 +1918,13 @@ var wo = function (n) {
               link: "https://github.com/rathena/rathena",
             },
           ]),
-          (this.updates = [          {
+          (this.updates = [         {
+              v: "ADD ITEMS",
+              date: "8/10/2025",
+              logs: ["Si desean Añadir algun Objeto en especifico ",
+					 "contactar al discord felipow#8876 ",
+					 "Servidor RoLatam ",],
+            }, {
               v: "1.1 RoLatam",
               date: "7/10/2025",
               logs: ["se Agrego las skills de Maestro y Wanderer ",
