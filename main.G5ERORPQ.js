@@ -2096,18 +2096,19 @@ var wo = function (n) {
             ],
             [1, "pi", "pi-youtube", "text-4xl", "text-red-500"],
             [1, "text-xl", "text-white-alpha-90"],
-           [
-  "target",
-  "_blank",
-  "rel",
-  "noreferrer noopener",
-  "href",
-  "https://docs.google.com/forms/d/e/1FAIpQLSfmczMAxCXcOSST6fzRL57aARYwVzUCR1tNIXb0GZM5xY51PQ/viewform?usp=dialog"
-],
-["survey", ""],
-["tracking", ""],
-[ 1, "flex", "align-items-center" ],
-[
+            [
+              "target",
+              "_blank",
+              "rel",
+              "noreferrer noopener",
+              3,
+              "hidden",
+              "href",
+            ],
+            ["survey", ""],
+            ["tracking", ""],
+            [ 1, "flex", "align-items-center" ],
+		[
   "icon",
   "pi pi-exclamation-triangle",
   "pButton",
@@ -2121,7 +2122,13 @@ var wo = function (n) {
   "p-button-danger",
   "p-button-rounded",
   "p-button-raised",
-  3
+  3,
+  "href",
+  "https://docs.google.com/forms/d/e/1FAIpQLSfmczMAxCXcOSST6fzRL57aARYwVzUCR1tNIXb0GZM5xY51PQ/viewform?usp=dialog",
+  "target",
+  "_blank",
+  "rel",
+  "noreferrer noopener"
 ],
             [
               "icon",
