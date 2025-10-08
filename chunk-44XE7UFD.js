@@ -23389,6 +23389,7 @@ var Fn = (function (e) {
     { name: "Staff_170", enchants: [null, null, j, j] },
     { name: "Cakram", enchants: [null, null, j, j] },
     { name: "House_Auger", enchants: [null, null, j, j] },
+	{ name: "Tae_Goo_Lyeon", enchants: [null, null, j, j] },
     { name: "Thorn_Staff_", enchants: [null, null, j, j] },
     { name: "Kronos", enchants: [null, null, j, j] },
     { name: "Balistar_IL", enchants: [null, null, j, j] },
