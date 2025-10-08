@@ -18838,6 +18838,26 @@ var Q_ = [
       { label: "No", value: 0, isUse: !1 },
     ],
   },
+  {
+    name: "Windmill Rush",
+    label: "Windmill Rush",
+    inputType: "selectButton",
+    isDebuff: !0,
+    dropdown: [
+      { label: "Yes", value: 5, isUse: !0, bonus: { atk: 30 } },
+      { label: "No", value: 0, isUse: !1 },
+    ],
+  },
+  {
+    name: "Dances with WargsDances with Wargs",
+    label: "Dances with Wargs",
+    inputType: "selectButton",
+    isDebuff: !0,
+    dropdown: [
+      { label: "Yes", value: 5, isUse: !0, bonus: { range: 5, fct: 70, aspdPercent: 25  } },
+      { label: "No", value: 0, isUse: !1 },
+    ],
+  },
 ];
 var QV = (e, t) => {
   let n = e.activeSkills || [],
