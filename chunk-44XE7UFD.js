@@ -18828,6 +18828,16 @@ var Q_ = [
       { label: "No", value: 0, isUse: !1 },
     ],
   },
+  {
+    name: "Lady Luck",
+    label: "Lady Luck",
+    inputType: "selectButton",
+    isDebuff: !0,
+    dropdown: [
+      { label: "Yes", value: 5, isUse: !0, bonus: { cri: 10, criDmg: 20  } },
+      { label: "No", value: 0, isUse: !1 },
+    ],
+  },
 ];
 var QV = (e, t) => {
   let n = e.activeSkills || [],
