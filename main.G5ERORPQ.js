@@ -1626,10 +1626,7 @@ function go(n, t) {
       w(6, "\u0E27\u0E34\u0E18\u0E35\u0E43\u0E0A\u0E49\u0E07\u0E32\u0E19"),
       c()()()),
     n & 2)
-  ) {
-    let e = f();
-    (u(3), ke("href", e.env.youtubeVideoUrl, J));
-  }
+  )
 }
 function _o(n, t) {
   if (n & 1) {
