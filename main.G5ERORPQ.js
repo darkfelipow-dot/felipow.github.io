@@ -1918,7 +1918,17 @@ var wo = function (n) {
               link: "https://github.com/rathena/rathena",
             },
           ]),
-          (this.updates = [            {
+          (this.updates = [          {
+              v: "1.1 RoLatam",
+              date: "7/10/2025",
+              logs: ["se Agrego las skills de Maestro y Wanderer ",
+					  "Lady Luck",
+                      "Windmill Rush",
+                      "Battle Theme",
+                      "Dances With Wargs",
+                      "Añadida Tae Goo ",],
+            }, 
+		  {
               v: "1.0 RoLatam",
               date: "7/10/2025",
               logs: ["set shadow physica (añadido)",
