@@ -2216,11 +2216,9 @@ var wo = function (n) {
               "flex-wrap",
             ],
             [
-              "src",
               "",
               "alt",
-              "QR",
-              2,
+              "click abajo para rellenar el formulario y poder solicitar añadir un item",
               "",
               "",
             ],
