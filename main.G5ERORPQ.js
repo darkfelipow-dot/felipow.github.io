@@ -1623,12 +1623,12 @@ function go(n, t) {
       d(3, "a", 50),
       _(4, "i", 13),
       d(5, "span", 14),
-      w(6, "\u0E27\u0E34\u0E18\u0E35\u0E43\u0E0A\u0E49\u0E07\u0E32\u0E19"),
+      w(6, ""),
       c()()()),
     n & 2)
   ) {
     let e = f();
-    (u(3), ke("href", e.env.youtubeVideoUrl, J));
+    (u(3), ke("href"));
   }
 }
 function _o(n, t) {
@@ -1919,6 +1919,19 @@ var wo = function (n) {
             },
           ]),
           (this.updates = [        {
+              v: "1.3 RoLatam",
+              date: "9/10/2025",
+              logs: ["Gobine Illusion Armor",
+					 "Gobine Illuison Graves ",
+					 "Gobine Illuison Helmet ",
+					 "Gobine Illuison Garmet  ",
+					 "Scarf Booster A ",
+					 "Scarf Booster B ",
+					 "Scarf Booster C ",
+					 "Dark Pinguicula Card ",
+					 "Corregido el nombre de la mochila ",
+					 "Bravery Bag  = Heroic Backpack ",],
+            },{
               v: "1.2 RoLatam",
               date: "9/10/2025",
               logs: ["Se Añadio Growth Attack Booster Armor ",
@@ -2315,7 +2328,7 @@ var wo = function (n) {
               "pRipple",
               "",
               "label",
-              "Login",
+              "",
               1,
               "font-bold",
               "p-button-secondary",
