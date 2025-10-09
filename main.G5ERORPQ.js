@@ -2216,12 +2216,13 @@ var wo = function (n) {
               "flex-wrap",
             ],
             [
+              "src",
               "",
               "alt",
-              "LINK ABAJO",
+              "QR",
               2,
-              "",
-              "",
+              "width",
+              "300px",
             ],
             [
               1,
