@@ -2217,12 +2217,12 @@ var wo = function (n) {
             ],
             [
               "src",
-              "assets/demo/images/others/qr.jpg",
+              "",
               "alt",
               "QR",
               2,
-              "width",
-              "300px",
+              "",
+              "",
             ],
             [
               1,
