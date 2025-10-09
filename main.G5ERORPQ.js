@@ -1930,7 +1930,8 @@ var wo = function (n) {
 					 "Scarf Booster C ",
 					 "Dark Pinguicula Card ",
 					 "Corregido el nombre de la mochila ",
-					 "Bravery Bag  = Heroic Backpack ",],
+					 "Bravery Bag  = Heroic Backpack ",
+					 "Hero Trade Mail",],
             },{
               v: "1.2 RoLatam",
               date: "9/10/2025",
