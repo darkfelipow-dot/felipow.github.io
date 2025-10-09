@@ -2218,7 +2218,8 @@ var wo = function (n) {
             [
               "",
               "alt",
-              "click abajo para rellenar el formulario y poder solicitar añadir un item",
+              "QR",
+              2,
               "",
               "",
             ],
