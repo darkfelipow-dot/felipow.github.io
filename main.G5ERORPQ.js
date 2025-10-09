@@ -1918,7 +1918,13 @@ var wo = function (n) {
               link: "https://github.com/rathena/rathena",
             },
           ]),
-          (this.updates = [         {
+          (this.updates = [        {
+              v: "1.2 RoLatam",
+              date: "9/10/2025",
+              logs: ["Se Añadio Growth Attack Booster Armor ",
+					 "Se Añadio Growth Magic Booster Armor ",
+					 "Servidor RoLatam ",],
+            }, {
               v: "ADD ITEMS",
               date: "8/10/2025",
               logs: ["Si desean Añadir algun Objeto en especifico ",
