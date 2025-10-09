@@ -2218,7 +2218,7 @@ var wo = function (n) {
             [
               "",
               "alt",
-              "QR",
+              "LINK ABAJO",
               2,
               "",
               "",
