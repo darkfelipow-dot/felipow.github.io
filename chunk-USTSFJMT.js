@@ -27169,7 +27169,7 @@ var bo = class {
   getBaseCriRate(a = !1) {
     let { cri: e } = this.totalBonus,
       { totalLuk: n } = this.status,
-      t = a ? U(n * 0.3),
+      t = a ? U(n * 0.3) : U(n / 3),
       o = 1 + e + t;
     return this.weaponData.data?.typeName === "katar" ? o * 2 : o;
   }
