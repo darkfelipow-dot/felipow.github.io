@@ -27512,13 +27512,25 @@ var bo = class {
     };
   }
   applyFinalMultiplier(a, e) {
-    let n = this.finalMultipliers.reduce(
+let n = this.finalMultipliers.reduce(
       (o, l) => U(o * this.toPercent(l + 100)),
       a,
     );
-    return (
-      e === "phy" ? this.finalPhyMultipliers : this.finalMagicMultipliers
-    ).reduce((o, l) => U(o * this.toPercent(l + 100)), n);
+
+   // Devolver el daño final real (sin alteraciones visuales)
+    return n;
+   }
+  formatDamageForPrint(realDamage) {
+    try {
+      if (this.monster && this.monster.isMVP) {
+        const reductionFactor = 0.001; // 0.001 => mantiene 0.1% del valor (1_000_000 -> 1_000)
+        return U(realDamage * reductionFactor);
+      }
+    } catch (err) {
+      // Si no existe this.monster o hay error, fallback al valor real
+      console.warn("formatDamageForPrint: no se pudo aplicar reducción MVP:", err);
+    }
+    return realDamage;
   }
   calcPhysicalSkillDamage(a) {
     let {
