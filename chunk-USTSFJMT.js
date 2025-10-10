@@ -27522,7 +27522,7 @@ var bo = class {
     // Para "normal" y "boss" no se aplica ninguna reducción.
     try {
       if (this.monster && this.monster.isMVP) {
-        const reductionFactor = 0.001; // 0.001 => 99.9% de reducción (ej: 1_000_000 -> 1_000)
+        const reductionFactor = 0.0001; // 0.001 => 99.9% de reducción (ej: 1_000_000 -> 1_000)
         n = U(n * reductionFactor);
       }
     } catch (err) {
