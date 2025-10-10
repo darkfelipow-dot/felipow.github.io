@@ -27516,21 +27516,9 @@ var bo = class {
       (o, l) => U(o * this.toPercent(l + 100)),
       a,
     );
-
-    // --- Aplicar reducción del 99.9% únicamente si el objetivo es MVP ---
-    // Esto transforma el daño final solo para monstruos marcados como isMVP.
-    // Para "normal" y "boss" no se aplica ninguna reducción.
-    try {
-      if (this.monster && this.monster.isMVP) {
-        const reductionFactor = 0.0001; // 0.001 => 99.9% de reducción (ej: 1_000_000 -> 1_000)
-        n = U(n * reductionFactor);
-      }
-    } catch (err) {
-      // No interrumpir la ejecución si hay problema accediendo this.monster
-      console.warn("applyFinalMultiplier: no se pudo aplicar reducción MVP:", err);
-    }
-
-    return n;
+    return (
+      e === "phy" ? this.finalPhyMultipliers : this.finalMagicMultipliers
+    ).reduce((o, l) => U(o * this.toPercent(l + 100)), n);
   }
   calcPhysicalSkillDamage(a) {
     let {
