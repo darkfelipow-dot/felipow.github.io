@@ -4193,8 +4193,8 @@
     "spawn": "",
     "stats": {
       "attackRange": 1,
-      "level": 107,
-      "health": 6650000,
+      "level": 50,
+      "health": 362000,
       "sp": 1,
       "str": 97,
       "int": 71,
@@ -4206,12 +4206,12 @@
       "atk1": 3000,
       "atk2": 441,
       "attack": {
-        "minimum": 2604,
-        "maximum": 3804
+        "minimum": 676,
+        "maximum": 941
       },
       "magicAttack": {
-        "minimum": 486,
-        "maximum": 751
+        "minimum": 429,
+        "maximum": 694
       },
       "defense": 197,
       "baseExperience": 100000,
