@@ -34893,7 +34893,7 @@ var Es = (() => {
           ],
           [
             "label",
-            "\u0E41\u0E21\u0E48\u0E19:",
+            "Ignore Def:",
             "unit",
             "%",
             "styleClass",
