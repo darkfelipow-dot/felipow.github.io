@@ -27516,15 +27516,6 @@ applyFinalMultiplier(a, e) {
       (o, l) => U(o * this.toPercent(l + 100)),
       a,
     );
-    try {
-      if (this.monster && this.monster.isMVP) {
-        const reductionFactor = 0.001; // 0.001 => 99.9% de reducción (ej: 1_000_000 -> 1_000)
-        n = U(n * reductionFactor);
-      }
-    } catch (err) {
-      console.warn("applyFinalMultiplier: no se pudo aplicar reducción MVP:", err);
-    }
-
     return n;
   }
   calcPhysicalSkillDamage(a) {
