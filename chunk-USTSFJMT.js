@@ -27511,26 +27511,20 @@ var bo = class {
       propertyMultiplier: l,
     };
   }
-  applyFinalMultiplier(a, e) {
-let n = this.finalMultipliers.reduce(
+applyFinalMultiplier(a, e) {
+    let n = this.finalMultipliers.reduce(
       (o, l) => U(o * this.toPercent(l + 100)),
       a,
     );
-
-   // Devolver el daño final real (sin alteraciones visuales)
-    return n;
-   }
-  formatDamageForPrint(realDamage) {
     try {
       if (this.monster && this.monster.isMVP) {
-        const reductionFactor = 0.001; // 0.001 => mantiene 0.1% del valor (1_000_000 -> 1_000)
-        return U(realDamage * reductionFactor);
+        const reductionFactor = 0.001; // 0.001 => 99.9% de reducción (ej: 1_000_000 -> 1_000)
+        n = U(n * reductionFactor);
       }
     } catch (err) {
-      // Si no existe this.monster o hay error, fallback al valor real
-      console.warn("formatDamageForPrint: no se pudo aplicar reducción MVP:", err);
+      console.warn("applyFinalMultiplier: no se pudo aplicar reducción MVP:", err);
     }
-    return realDamage;
+    return n;
   }
   calcPhysicalSkillDamage(a) {
     let {
