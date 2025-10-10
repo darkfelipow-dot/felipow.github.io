@@ -27524,6 +27524,7 @@ applyFinalMultiplier(a, e) {
     } catch (err) {
       console.warn("applyFinalMultiplier: no se pudo aplicar reducción MVP:", err);
     }
+
     return n;
   }
   calcPhysicalSkillDamage(a) {
@@ -27620,35 +27621,6 @@ applyFinalMultiplier(a, e) {
       }),
       Pi = Z ? ht(De, !1) + Vt : 0,
       Ei = Z ? ht(ot, !1) + Vt : 0;
-try {
-      if (this.monster && this.monster.isMVP) {
-        const reductionFactor = 0.001; // deja 0.1% (ej: 1_000_000 -> 1_000)
-        // reducir valores base y derivados (y volver a normalizar con U / kt según convenga)
-        Nn = U;
-        zn = U;
-        Pi = U(Pi * reductionFactor);
-        Ei = U(Ei * reductionFactor);
-        // recomputar promedios con los valores reducidos
-        const avgNoCri = kt((Pi + Ei) / 2, 0);
-        const avgCri = kt((zn + Nn) / 2, 0);
-
-        return {
-          minDamage: zn,
-          maxDamage: Nn,
-          avgNoCriDamage: avgNoCri,
-          rawMinNoCri: Pi,
-          rawMaxNoCri: Ei,
-          avgCriDamage: avgCri,
-          propertyAtk: M,
-          propertyMultiplier: vt,
-          sizePenalty: o,
-          canCri: Z,
-          criDmgToMonster: Nt,
-        };
-      }
-    } catch (err) {
-      console.warn("calcPhysicalSkillDamage: no se pudo aplicar reducción MVP:", err);
-    }
     return {
       minDamage: zn,
       maxDamage: Nn,
