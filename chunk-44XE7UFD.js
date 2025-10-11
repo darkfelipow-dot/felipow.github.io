@@ -28426,11 +28426,27 @@ var ZT = {
             isMatk: !0,
             element: _.Ghost,
             hit: 2,
-            formula: (t) => {
-              let { model: n, skillLevel: r, status: i } = t,
-                s = n.level;
-              return (1e3 + r * 200 + i.totalInt) * (s / 100);
-            },
+              formula: (t) => {
+                  let { model: n, skillLevel: r } = t;
+                  const level = Number(n?.level || 0);
+                  const skill = Number(r || 0);
+
+                  // cálculo base del daño
+                  let damage = (1200 + skill * 600) * (level / 100);
+
+                  // según lo indicado, la clave MVP es i.isMVP — soportamos que el monster esté en t.i
+                  const monster = t.i || t.target || t.monster || t.selectedMonster || {};
+
+                  // detección simple de MVP usando la clave i.isMVP
+                  const isMvp = !!monster.isMVP;
+
+                  // aplicar reducción del 99.9% SOLO si es MVP (uso la misma constante de tu ejemplo)
+                  if (isMvp) {
+                      damage *= 0.00155;
+                  }
+
+                  return damage;
+              },
           },
           {
             name: "Chain Lightning",
