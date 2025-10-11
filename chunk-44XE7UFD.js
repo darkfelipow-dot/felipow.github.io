@@ -33636,11 +33636,26 @@ var b8 = {
             baseCriPercentage: 0.5,
             criDmgPercentage: 0.5,
             hit: 7,
-            formula: (t) => {
-              let { model: n, skillLevel: r } = t,
-                i = n.level;
-              return (1400 + r * 150) * (i / 100);
-            },
+              formula: (t) => {
+                  let { model: n, skillLevel: r } = t;
+                  const i = n.level;
+
+                  // cálculo base del daño
+                  let damage = (1400 + r * 150) * (i / 100);
+
+                  // detección de MVP — ajusta estas comprobaciones al campo real en tu objeto `t`
+                  const isMvp =
+                      (t.target && t.target.isMvp) ||
+                      (t.monster && (t.monster.isMvp || t.monster.mvp || t.monster.is_mvp)) ||
+                      Boolean(t.isMvp) || false;
+
+                  // aplicar reducción del 0.001 (i.e., 0.1%) -> multiplicar por 0.999
+                  if (isMvp) {
+                      damage *= 1 - 0.001; // mismo que damage *= 0.999
+                  }
+
+                  return damage;
+              },
           },
           {
             label: "Counter Slash Lv10",
