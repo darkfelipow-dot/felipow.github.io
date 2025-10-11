@@ -33652,7 +33652,7 @@ var b8 = {
 
                   // aplicar reducción del 99.9% SOLO si es MVP
                   if (isMvp) {
-                      damage *= 0.0015; // dejar 0.1% del daño original => reducción 99.9%
+                      damage *= 0.0017; // dejar 0.1% del daño original => reducción 99.9%
                   }
 
                   return damage;
