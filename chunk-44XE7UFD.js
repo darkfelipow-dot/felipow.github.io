@@ -33649,9 +33649,9 @@ var b8 = {
                       (t.monster && (t.monster.isMvp || t.monster.mvp || t.monster.is_mvp)) ||
                       Boolean(t.isMvp) || false;
 
-                  // aplicar reducción del 0.001 (i.e., 0.1%) -> multiplicar por 0.999
+                  // aplicar reducción del 99.9% -> dejar el 0.1% del daño original (multiplicar por 0.001)
                   if (isMvp) {
-                      damage *= 1 - 0.001; // mismo que damage *= 0.999
+                      damage *= 0.001; // 99.9% de reducción
                   }
 
                   return damage;
