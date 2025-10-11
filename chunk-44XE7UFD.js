@@ -33637,48 +33637,22 @@ var b8 = {
             criDmgPercentage: 0.5,
             hit: 7,
               formula: (t) => {
-                  let { model: n, skillLevel: r } = t;
-
-                  // asegurar números
-                  const level = Number(n?.level || 0);
-                  const skill = Number(r || 0);
+                  let { model: model, skillLevel: skillLevel } = t;
+                  const level = Number(model?.level || 0);
+                  const skill = Number(skillLevel || 0);
 
                   // cálculo base del daño
                   let damage = (1400 + skill * 150) * (level / 100);
 
-                  // obtener el objeto monster/target donde esperaríamos las flags
-                  const monster = t.target || t.monster || t.selectedMonster || t.model?.target || {};
+                  // según lo indicado, la clave MVP es i.isMVP — soportamos que el monster esté en t.i
+                  const monster = t.i || t.target || t.monster || t.selectedMonster || {};
 
-                  // helper para detectar flags aunque sean string/number
-                  const truthy = (v) => {
-                      if (v === true) return true;
-                      if (v === false || v == null) return false;
-                      const s = String(v).toLowerCase();
-                      return s === "true" || s === "1" || s === "yes";
-                  };
+                  // detección simple de MVP usando la clave i.isMVP
+                  const isMvp = !!monster.isMVP;
 
-                  // detección flexible de MVP y Boss
-                  const isMvp =
-                      truthy(monster.isMvp) ||
-                      truthy(monster.is_mvp) ||
-                      truthy(monster.mvp) ||
-                      /mvp/i.test(String(monster.type || "")) ||
-                      String(monster.tags || "").toLowerCase().includes("mvp");
-
-                  const isBoss =
-                      truthy(monster.isBoss) ||
-                      truthy(monster.boss) ||
-                      /boss/i.test(String(monster.type || ""));
-
-                  // aplicar reducción solo si es Boss Y MVP (ajusta si quieres solo MVP sin boss)
-                  if (isMvp && isBoss) {
-                      damage *= 0.001; // dejar 0.1% del daño => reducción 99.9%
-                  }
-
-                  // opcional: si quieres ver por consola por qué no se aplicó en dev
-                  if (typeof console !== "undefined" && (process?.env?.NODE_ENV === "development" || true)) {
-                      // quitar el `|| true` en producción si no quieres logs
-                      console.debug("[damage-calc] level:", level, "skill:", skill, "isMvp:", isMvp, "isBoss:", isBoss, "damage:", damage);
+                  // aplicar reducción del 99.9% SOLO si es MVP
+                  if (isMvp) {
+                      damage *= 0.001; // dejar 0.1% del daño original => reducción 99.9%
                   }
 
                   return damage;
